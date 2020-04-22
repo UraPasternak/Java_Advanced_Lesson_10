@@ -17,19 +17,20 @@ public class LoginServlet extends HttpServlet {
     private UserService userService = UserServiceImpl.getUserService();
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String login = request.getParameter("login");
+		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
-		User user = userService.getUserByEmail(login);
+		User user = userService.getUserByEmail(email);
 		
 		if(user != null && user.getPassword().equals(password)) {
-			request.setAttribute("userEmail", login);
-			request.getRequestDispatcher("cabinet.jsp").forward(request, response);
+			response.setContentType("text/plain");
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().write("Success!");
 		}else {
-		
-		request.getRequestDispatcher("login.jsp").forward(request, response);
+			response.setContentType("text/plain");
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().write("err!");
 		}
-		
 	}
 
 }
