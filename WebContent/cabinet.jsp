@@ -4,9 +4,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Cabinet</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
 </head>
 <body>
-	<h1>Welcom cabinet ${userEmail}</h1>
+	
+	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="sidebar.jsp"></jsp:include>
+	
+	<main>
+    <div class="container" style="height:1500px;">
+        <div class="row pt-5">
+            <div class="col text-center">
+                <h2>Wellcom cabinet!!!</h2>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
 </body>
 </html>

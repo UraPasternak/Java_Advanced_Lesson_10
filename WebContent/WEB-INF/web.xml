@@ -3,10 +3,14 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
-	<display-name>lesson-07n</display-name>
+	<display-name>lesson-08n</display-name>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
+	<servlet>
+		<servlet-name>AddProduct</servlet-name>
+		<servlet-class>ua.lviv.ura.servlet.AddProduct</servlet-class>
+	</servlet>
 	<servlet>
 		<servlet-name>registration</servlet-name>
 		<servlet-class>ua.lviv.ura.servlet.RegistrationServlet</servlet-class>
@@ -15,6 +19,10 @@
 		<servlet-name>login</servlet-name>
 		<servlet-class>ua.lviv.ura.servlet.LoginServlet</servlet-class>
 	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddProduct</servlet-name>
+		<url-pattern>/AddProduct</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>registration</servlet-name>
 		<url-pattern>/registration</url-pattern>
