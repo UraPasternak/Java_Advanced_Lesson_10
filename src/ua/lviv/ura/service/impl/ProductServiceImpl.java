@@ -2,6 +2,9 @@ package ua.lviv.ura.service.impl;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
@@ -59,5 +62,10 @@ public class ProductServiceImpl implements ProductService {
 	public void delete(int id) {
 		
 		productDao.delete(id);
+	}
+	
+	@Override
+	public Map<Integer, Product> readAllMap() {
+		return  readAll().stream().collect(Collectors.toMap(Product::getId, Function.identity()));
 	}
 }

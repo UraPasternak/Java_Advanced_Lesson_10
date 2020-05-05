@@ -23,7 +23,7 @@
     <div class="container" style="height:1500px;">
         <div class="row pt-5">
             <div class="col text-center">
-                <h2>Wellcom cabinet!!!</h2>
+                <h2>Wellcom cabinet!!! ${userEmail}</h2>
                 
             </div>
         </div>

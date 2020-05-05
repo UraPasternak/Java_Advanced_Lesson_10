@@ -19,20 +19,39 @@
 <body>
 <div class="sidenav">
   <a class="add-product" href="#">Add product</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a class="all-product" href="#">All product</a>
+  <a class="korzina" href="#">Korzina</a>
   <a class="nav-link" href='javascript: document.location.href = "index.jsp";'>Exit</a>
 </div>
-		<form class="form-add-product">
-				<input class="add-name" type="text" placeholder="name-product" />
-				<input class="add-description" type="text" placeholder="description" />
-				<input class="add-price" type="text" placeholder="price" />
-				<button class="add-product">add</button>
-				
-		</form>
+
+<form class="form-add-product">
+ <input class="add-name" type="text" placeholder="name-product" />
+ <input class="add-description" type="text" placeholder="description" />
+ <input class="add-price" type="text" placeholder="price" />
+ <button class="add-product">add</button>			
+</form>
+
+<div class="container-fluid" style="width: 50%">
+		<div class="row">
+			<div id="productCards"></div>
+		</div>
+</div>
+
+<div class="container-fluid">
+		<input type="text" id="myInput" onkeyup="myFunction()"
+			placeholder="Search for names.." title="Type in a name" style="display: none">
+
+		<table id="myTable" style="display: none">
+		</table>
+
+
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/add-product.js"></script>
+<script src="js/all-product.js"></script>
+<script src="js/by-product.js"></script>
+<script src="js/korzina.js"></script>
+
 </body>
 </html>
